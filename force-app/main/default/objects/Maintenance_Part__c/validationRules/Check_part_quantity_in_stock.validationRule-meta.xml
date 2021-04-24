@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_part_quantity_in_stock</fullName>
+    <active>true</active>
+    <errorConditionFormula>Quantity_Utilized__c  &gt; (Part__r.Quantity_In_Stock__c + PRIORVALUE(Quantity_Utilized__c))</errorConditionFormula>
+    <errorMessage>Selected Part is not in stock or entered quantity is more than in stock</errorMessage>
+</ValidationRule>
